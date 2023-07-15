@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>43rd中原會計系系學會檔案上傳與查詢上傳系統</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333333;
+      margin-top: 15px;
+      line-height: 1.2;
+         }
+    
+    
+    
+    
+    
+    .button {
+    display: block;
+      margin: 10px auto; /* 調整按鈕的上下距離，並將左右邊界調整為自動置中 */
+      padding: 8px 16px; /* 調整按鈕的內邊距 */
+      background-color: #3498db;
+      color: #ffffff;
+      font-size: 17px;
+      text-decoration: none;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: opacity 0.3s; /* 添加過渡效果 */
+    }
+    
+    .button:hover {
+      opacity: 0.8; /* 滑鼠懸停時的透明度 */
+    }
+    .button:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 滑鼠懸停時的凸出效果 */
+    }
+    .button:hover {
+      transform: rotate(0.3deg); /* 滑鼠懸停時旋轉 360 度 */
+    }
+    
+    @keyframes wave {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    }
+    
+    .footer {
+      font-size: 12px;
+      color: #333333;
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    .footer {   /* 版本 更新時間.... */
+      font-size: 12px;
+      color: #050505;
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    #currentDateTime {   /* 現在時間 */
+      font-size: 16px;
+      font-weight: bold;
+      color: #828080;
+      margin-top: 10px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    
+    #statistics {      /* 累積次數 */
+        font-size: 12px;
+      font-weight: bold;
+      color: #828080;
+      margin-top: 30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    #onlineUsers {       /* 在線人數 */
+        font-size: 12px;
+      font-weight: bold;
+      color: #828080;
+      margin-top: 50px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: center;
+      line-height: 0.3;
+    }
+    
+    #searchBox {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      text-align: left;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    #googleLogo {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('google_logo.png');
+      background-size: cover;
+      margin-right: 5px;
+    }
+    
+    #marquee {                /* 跑馬 */
+      font-size: 17px;
+      font-weight: bold;
+      color: #333333;
+      margin-top: 20px;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    
+    #announcement {    /* 公告 */
+      font-size: 17px;
+      font-weight: bold;
+      color: #333333;
+      margin-top: 20px;
+      text-align: center;
+      animation: blink 1.5s infinite; /* 添加閃爍動畫 */
+    }
+    #announcement:hover {
+      animation: none; /* 移除滑鼠懸停時的閃爍動畫 */
+      color: #ff0000; /* 變更文字顏色 */
+      text-shadow: 0 0 5px #ff0000; /* 添加文字陰影效果 */
+    }
+    
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <script>
+    var usageCount = 0;
+    var onlineUsers = 0;
+    
+    function updateTime() {
+      var now = new Date();
+      var date = now.toLocaleDateString();
+      var time = now.toLocaleTimeString();
+      document.getElementById("currentDateTime").innerHTML = "現在時間：" + date + " " + time;
+    }
+    
+    function updateStatistics() {
+      usageCount++;
+      onlineUsers = Math.floor(Math.random() * 6); // 假設在線人數是隨機數
+      document.getElementById("statistics").innerHTML = "網頁累積使用次數：" + usageCount + "次";
+      document.getElementById("onlineUsers").innerHTML = "網頁目前在線人數：" + onlineUsers + "人";
+    }
+    
+    setInterval(updateTime, 1000);
+    setInterval(updateStatistics, 5000);
+  </script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" onclick="enlargeTitle()">43rd中原會計系系學<br>會檔案上傳與查詢上傳系統</h1>
+    
+    <div id="marquee">
+      <marquee behavior="scroll" direction="left"><b>目前網頁測試中!  目前網頁測試中!  目前網頁測試中!</b></marquee>
+    </div>
+    
+    <div id="announcement">
+      <b>公告事項：</b>歡迎使用 目前網頁測試中!
+       
+    </div>
+    
+    <div id="searchBox">
+      <a href="https://www.google.com" target="_blank" id="googleLogo"></a>
+      <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="輸入關鍵字" required>
+        <input type="submit" value="搜尋">
+      </form>
+    </div>
+    
+    <div id="currentDateTime"></div>
+    
+    <div id="statistics"></div>
+    <div id="onlineUsers"></div>
+    
+    <div>
+      <a class="button" href="https://script.google.com/macros/s/AKfycbyMyGqwl471WrclEZ2882WW_4JPbkLzc0L_Mgw0cu0oRp4RpQxrk4l8SQUBuIF1Ao9p/exec" target="_self">檔案上傳系統</a>
+      <a class="button" href="https://script.google.com/macros/s/AKfycbzxthFe-pdDcUKIqtBEXPfK9Z0VfsWOzUICHlI46RKiQCHtNGxjWELFx72J-f95wBednA/exec" target="_self">檔案查詢系統</a>
+    </div>
+    
+    <div class="footer">
+      版&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp次：第1版&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>
+      更新日期：2023年7月15日<br>
+      著作權人：CWH&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    </div>
+  </div>
+</body>
+</html>
+
