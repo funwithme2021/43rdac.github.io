@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <script>
+    var fhs = document.createElement('script');
+    var fhs_id = "5686762";
+    var ref = ('' + document.referrer + '');
+    var pn = window.location;
+    var w_h = window.screen.width + " x " + window.screen.height;
+    fhs.src = "//freehostedscripts.net/ocounter.php?site=" + fhs_id + "&e1=網頁目前在線人數:&e2=網頁目前在線人數:&r=" + ref + "&wh=" + w_h + "&a=1&pn=" + pn + "";
+    document.head.appendChild(fhs);
+    document.write("<span id='o_" + fhs_id + "'></span>");
+  </script>
   
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-08598QQBXL"></script>
