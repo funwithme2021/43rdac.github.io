@@ -342,17 +342,7 @@
         document.getElementById("onlineUsers").innerHTML = "網頁目前在線人數：" + onlineUsers + "人";
       }
   
-      setInterval(updateTime, 1000);
-      setInterval(updateStatistics, 5000);
-  
-      setInterval(function() {
-        var usageCountElement = document.getElementById("usageCount");
-        var onlineUsersCountElement = document.getElementById("onlineUsersCount");
-  
-        // 移除 FC2 計數器標籤，只保留數字
-        usageCountElement.innerHTML = usageCountElement.innerText.replace("<!-- FC2計數器 開始 -->", "").replace("<!-- FC2計數器 結束 -->", "");
-        onlineUsersCountElement.innerHTML = onlineUsersCountElement.innerText.replace("<!-- FC2計數器 開始 -->", "").replace("<!-- FC2計數器 結束 -->", "");
-      }, 3000);
+     
     </script>
 
   </div>
