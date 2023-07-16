@@ -2,29 +2,7 @@
 <html>
 <head>
 
- <!-- FC2計數器 開始 -->
-網頁累積使用人數:<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89504295"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89504295" /></noscript>
-<br><!-- FC2計數器 結束 -->
-  <!-- FC2計數器 開始 -->
-網頁目前在線人數:<script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=89504295"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=89504295" /></noscript>
-<!-- FC2計數器 結束 -->
- <style>
-    #statistics {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 9999;
-    }
-    
-    #onlineUsers {
-        position: fixed;
-        top: 30px;
-        right: 10px;
-        z-index: 9999;
-    }
-</style>
- 
- <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-08598QQBXL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -33,7 +11,7 @@
 
   gtag('config', 'G-08598QQBXL');
 </script>
-  
+
   <title>43rd中原會計系系學會檔案上傳與查詢上傳系統</title>
   <style>
     body {
@@ -45,11 +23,12 @@
     
     .container {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 30px;
     }
     
     h1 {
       font-size: 40px;
+      text-align: center;
       font-weight: bold;
       color: #fafafa;
       margin-top: 50px;
@@ -127,10 +106,11 @@
       right: 10px;
     }
     
+
     #statistics {      /* 累積次數 */
         font-size: 10px;
       font-weight: bold;
-      color: #ffffff;
+      color: #ffffff00;
       margin-top: 30px;
       position: absolute;
       top: 7px;
@@ -142,7 +122,7 @@
     #onlineUsers {       /* 在線人數 */
         font-size: 10px;
       font-weight: bold;
-      color: #ffffff;
+      color: #ffffff00;
       margin-top: 50px;
       position: absolute;
       top: 4px;
@@ -150,7 +130,7 @@
       text-align: center;
       line-height: 0.3;
     }
-    
+
     #searchBox {
       position: absolute;
       top: 10px;
@@ -217,6 +197,31 @@
       }
     }
     
+    #usageCount{      /* fc2累積次數 */
+        font-size: 10px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-top: 30px;
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      text-align: center;
+      line-height: 0.8;
+    }
+
+
+    #onlineUsersCount{      /* fcs在線數 */
+        font-size: 10px;
+      font-weight: bold;
+      color: #fefefe;
+      margin-top: 42px;
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      text-align: center;
+      line-height: 0.8;
+    }
+
     #announcement {    /* 公告 */
       font-size: 17px;
       font-weight: bold;
@@ -264,17 +269,29 @@
     setInterval(updateTime, 1000);
     setInterval(updateStatistics, 5000);
   </script>
+
+ 
+
+
 </head>
 <body>
+
+    <div id="usageCount"><!-- FC2計數器 開始 -->
+      <p>網頁累積使用次數：<script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=89504295"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=89504295" /></noscript>次
+    </div>
+    <div id="onlineUsersCount"><!-- FC2計數器 開始 -->
+      網頁目前在線人數：<script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=89504295"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=89504295" /></noscript>人</p>
+    </div>
+
     <div class="container">
         <h1 id="title" onclick="enlargeTitle()">43rd中原大學會計學系<br>系學會檔案上傳與查詢系統</h1>
     
     <div id="marquee">
-      <marquee behavior="scroll" direction="left"class="marquee"><b>目前網頁測試中!  目前網頁測試中!  目前網頁測試中!</b></marquee>
+      <marquee behavior="scroll" direction="left"class="marquee"><b>歡迎使用 目前網頁測試中!  歡迎使用 目前網頁測試中!  歡迎使用 目前網頁測試中!</b></marquee>
     </div>
     
     <div id="announcement">
-      <b>公告事項：</b>歡迎使用 目前網頁測試中!
+      <b>公告事項：</b>目前網頁測試中!每周六0-6時為維護時段，暫停使用。
        
     </div>
     
@@ -289,7 +306,8 @@
     <div id="currentDateTime"></div>
     
     <div id="statistics"></div>
-    <div id="onlineUsers"></div>
+    <div id="onlineUsers">       
+    </div>
     
     <div>
       <a class="button" href="https://script.google.com/macros/s/AKfycbyMyGqwl471WrclEZ2882WW_4JPbkLzc0L_Mgw0cu0oRp4RpQxrk4l8SQUBuIF1Ao9p/exec" target="_self">檔案上傳系統</a>
@@ -301,9 +319,42 @@
       <img src="account.jpg" alt="Account Image">
     </div>
 
+    
     <div class="footer">
-      <p>版次：第1版&emsp;|&emsp;更新日期：2023年7月15日&emsp;|&emsp;著作權人：CWH</p>
+      <p>版次：第3版&emsp;|&emsp;更新日期：2023年7月16日&emsp;|&emsp;著作權人：CWH</p>
     </div>
+
+    <script>
+      var usageCount = 0;
+      var onlineUsers = 0;
+  
+      function updateTime() {
+        var now = new Date();
+        var date = now.toLocaleDateString();
+        var time = now.toLocaleTimeString();
+        document.getElementById("currentDateTime").innerHTML = "現在時間：" + date + " " + time;
+      }
+  
+      function updateStatistics() {
+        usageCount++;
+        onlineUsers = Math.floor(Math.random() * 6); // 假設在線人數是隨機數
+        document.getElementById("statistics").innerHTML = "網頁累積使用次數：" + usageCount + "次";
+        document.getElementById("onlineUsers").innerHTML = "網頁目前在線人數：" + onlineUsers + "人";
+      }
+  
+      setInterval(updateTime, 1000);
+      setInterval(updateStatistics, 5000);
+  
+      setInterval(function() {
+        var usageCountElement = document.getElementById("usageCount");
+        var onlineUsersCountElement = document.getElementById("onlineUsersCount");
+  
+        // 移除 FC2 計數器標籤，只保留數字
+        usageCountElement.innerHTML = usageCountElement.innerText.replace("<!-- FC2計數器 開始 -->", "").replace("<!-- FC2計數器 結束 -->", "");
+        onlineUsersCountElement.innerHTML = onlineUsersCountElement.innerText.replace("<!-- FC2計數器 開始 -->", "").replace("<!-- FC2計數器 結束 -->", "");
+      }, 3000);
+    </script>
+
   </div>
 </body>
 </html>
