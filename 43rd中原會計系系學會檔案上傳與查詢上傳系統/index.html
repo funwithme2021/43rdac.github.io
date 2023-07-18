@@ -55,14 +55,7 @@
       z-index: 2;
       transition: opacity 0.3s; /* 添加過渡效果 */
     }
-    .icon {
-  font-size: 0;
-  color: #ffffff;
-  margin-right: 5px;
-  width: 16px;
-  height: 16px;
-}
-  
+    
     .button:hover {
       opacity: 0.8; /* 滑鼠懸停時的透明度 */
     }
@@ -167,14 +160,8 @@
     #imageContainer img {
       display: block; /* 設為區塊元素以套用水平置中 */
       margin: 0 auto; /* 水平置中 */
-        cursor: pointer;
     }
-    #imageDescription {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  margin-top: 10px;
-}
+
     #marquee {                /* 跑馬 */
       font-size: 17px;
       font-weight: bold;
@@ -281,25 +268,6 @@
     
     setInterval(updateTime, 1000);
     setInterval(updateStatistics, 5000);
-
-    document.getElementById("imageContainer").addEventListener("click", function(event) {
-  var imageOverlay = document.getElementById("imageOverlay");
-  var imageOverlayContent = document.getElementById("imageOverlayContent");
-  var imageDescription = document.getElementById("imageDescription");
-
-  if (event.target.tagName === "IMG") {
-    var imageSrc = event.target.src;
-    var description = event.target.getAttribute("data-description");
-
-    imageOverlayContent.innerHTML = "<img src='" + imageSrc + "'>";
-    imageDescription.innerText = description;
-
-    imageOverlay.classList.add("active");
-    
-    document.getElementById("icon").addEventListener("click", function() {
-  alert("操作說明:點選「檔案上傳系統」或「檔案上傳系統」按鈕進入登入頁面，按提示輸入正確的帳號及密碼後即可登入頁面並進行檔案上傳或查詢。
-        「檔案上傳系統」為了確保檔案完整且安全，送出檔案後欲再次上傳檔案請重新登入；「檔案上傳系統」重新整理頁面即可更新資料，不需再次登入。");
-});
   </script>
 
  
@@ -341,41 +309,19 @@
     <div id="onlineUsers">       
     </div>
     
-   
-
-      <div class="form_title">			
-
-	      
-	      <span id="icon" class="icon">
-    <img src="search_icon.png" alt="Search Icon" width="16" height="16">  </span>
-
-
-	      
+    <div>
       <a class="button" href="https://script.google.com/macros/s/AKfycbyoN2BfGz1rLauXg5Cjw6FD5AjxEdJVvZWXmAm3Iu15YROj215L8sP9Xmjh_nygujT-/exec" target="_self">檔案上傳系統</a>
       <a>&emsp;</a>
-      <a class="button" href="https://script.google.com/macros/s/AKfycbyXxPX0pVo1MBMg3ZaNtz-Y3addqtypFu4akvLyg_TPy_mkjg_XxFmcavTsYVvczCV9EA/exec" target="_self"> 檔案查詢系統</a>
+      <a class="button" href="https://script.google.com/macros/s/AKfycbyXxPX0pVo1MBMg3ZaNtz-Y3addqtypFu4akvLyg_TPy_mkjg_XxFmcavTsYVvczCV9EA/exec" target="_self">檔案查詢系統</a>
     </div>
     
     <div id="imageContainer">
-	    <style>
-.box {
-position: relative;
-}
-.box:hover::before {
-position: absolute;
-top: -50px;
-left: 0;
-content: '你看到我啦(・ω・)ノ';
-}
-</style>
-<div class="box"><img src="account.jpg" alt="Account Image">
-    </div></div>
       <img src="account.jpg" alt="Account Image">
     </div>
 
     
     <div class="footer">
-      <p>問題回報&emsp;<a href="mailto:funwithme2021@gmail.com"style="color:#fafafa" >funwithme2021@gmail.com<br></a> Copyright © 2023 邱偉軒. All rights reserved.&emsp;|&emsp;V3.2.20230719&emsp;</p>
+      <p>問題回報<a href="funwithme2021@gmail.com"style="color:#fafafa" >funwithme2021@gmail.com<br></a> Copyright © 2023 邱偉軒. All rights reserved.&emsp;|&emsp;V3.2.20230719&emsp;</p>
     </div>
 
     <script>
