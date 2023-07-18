@@ -141,6 +141,53 @@
       align-items: center;
       justify-content: flex-start;
     }
+
+
+
+
+
+
+    #uploadSystemTooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+#uploadSystemTooltipIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#uploadSystemTooltipContainer:hover::after {
+  content: "這是檔案上傳系統";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#uploadSystemTooltipContainer:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+    
     
     #googleLogo {
       display: inline-block;
@@ -310,6 +357,15 @@
     </div>
     
     <div>
+
+
+      <div id="uploadSystemTooltipContainer">
+  <img src="search_icon.png" alt="說明圖示" id="uploadSystemTooltipIcon">
+      </div>
+
+
+
+      
       <a class="button" href="https://script.google.com/macros/s/AKfycbyoN2BfGz1rLauXg5Cjw6FD5AjxEdJVvZWXmAm3Iu15YROj215L8sP9Xmjh_nygujT-/exec" target="_self">檔案上傳系統</a>
       <a>&emsp;</a>
       <a class="button" href="https://script.google.com/macros/s/AKfycbyXxPX0pVo1MBMg3ZaNtz-Y3addqtypFu4akvLyg_TPy_mkjg_XxFmcavTsYVvczCV9EA/exec" target="_self">檔案查詢系統</a>
