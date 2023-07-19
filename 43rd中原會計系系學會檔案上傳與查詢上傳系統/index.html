@@ -222,38 +222,6 @@
       line-height: 0.8;
     }
 
-
-
-    
-    #uploadSystemContainer::before,
-    #querySystemContainer::before {
-      content: attr(data-tooltip);
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #ffffff;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 14px;
-      white-space: normal;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-      max-width: 100px;
-    }
-
-    #uploadSystemContainer:hover::before,
-    #querySystemContainer:hover::before {
-      opacity: 1;
-      visibility: visible;
-    }
-
-
-
-    
-
     #announcement {    /* 公告 */
       font-size: 17px;
       font-weight: bold;
@@ -342,17 +310,14 @@
     </div>
     
     <div>
-    <!-- 檔案上傳系統 -->
-    <div id="uploadSystemContainer" data-tooltip="這是檔案上傳系統的使用說明文字">
       <a class="button" href="https://script.google.com/macros/s/AKfycbyoN2BfGz1rLauXg5Cjw6FD5AjxEdJVvZWXmAm3Iu15YROj215L8sP9Xmjh_nygujT-/exec" target="_self">檔案上傳系統</a>
-    </div>
-
-    <!-- 檔案查詢系統 -->
-    <div id="querySystemContainer" data-tooltip="這是檔案查詢系統的使用說明文字">
+      <a>&emsp;</a>
       <a class="button" href="https://script.google.com/macros/s/AKfycbyXxPX0pVo1MBMg3ZaNtz-Y3addqtypFu4akvLyg_TPy_mkjg_XxFmcavTsYVvczCV9EA/exec" target="_self">檔案查詢系統</a>
     </div>
     
-  
+    <div id="imageContainer">
+      <img src="account.jpg" alt="Account Image">
+    </div>
 
     
     <div class="footer">
