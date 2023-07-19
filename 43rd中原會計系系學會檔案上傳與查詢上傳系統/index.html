@@ -147,34 +147,50 @@
 
 
 
+
+    
+
+
     #uploadSystemTooltipContainer {
-  position: relative;
+  position: relative ;
   display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    border-radius: 20px;
+    margin-right: 5px;
 }
+
 
 #uploadSystemTooltipIcon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  cursor: pointer;
+  display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    border-radius: 20px;
+    margin-right: 5px;
 }
 
+
 #uploadSystemTooltipContainer:hover::after {
-  content: "這是檔案上傳系統";
+  content: "操作說明:點選「檔案上傳系統」或「檔案上傳系統」按鈕進入登入頁面，按提示輸入正確的帳號及密碼後即可登入頁面並進行檔案上傳或查詢。「檔案上傳系統」為了確保檔案完整且安全，送出檔案後欲再次上傳檔案請重新登入；「檔案上傳系統」重新整理頁面即可更新資料，不需再次登入。";
   position: absolute;
-  top: -30px;
+  display: inline-block;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
+  background-color: rgba(196, 192, 192, 0.8);
+  color: #000000;
   padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  white-space: nowrap;
+  border-radius: 20px;
+  font-size: 10px;
+  white-space: break-all;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
 }
+
+  
 
 #uploadSystemTooltipContainer:hover::after {
   opacity: 1;
@@ -359,7 +375,7 @@
     <div>
 
 
-      <div id="uploadSystemTooltipContainer">
+      說明<div id="uploadSystemTooltipContainer">
   <img src="search_icon.png" alt="說明圖示" id="uploadSystemTooltipIcon">
       </div>
 
@@ -404,4 +420,5 @@
   </div>
 </body>
 </html>
+
 
