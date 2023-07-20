@@ -37,6 +37,57 @@
          }
     
     
+
+
+
+
+
+.operation-guide {
+  font-size: 1px;
+  position: relative;
+  display: inline-block;
+  margin-left: 70px; /* 向右調整5像素 */
+  margin-top: 28x; /* 向下調整2像素 */
+ 
+}
+
+.guide-button {               /* 說明按鈕 */
+  font-size: 0.2px;
+  background-color: #546979b6;
+  color: #ffffff;
+  border: none;
+  border-radius: 5%;
+  width: 43px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.guide-tooltip {        /* 說明文字框 */
+  font-size: 1.5px;
+  display: none;
+  position: absolute;
+  background-color: #ffffffc5;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 495px;
+  height: 85px;
+  margin-left: 60px; /* 向右調整5像素 */
+  margin-top: 78px; /* 向下調整2像素 */
+}
+
+.operation-guide:hover .guide-tooltip {
+  display: block;
+}
+
+
+
+
+
     
     
     
@@ -44,6 +95,7 @@
     display: inline-block;
       margin: 10px auto; /* 調整按鈕的上下距離，並將左右邊界調整為自動置中 */
       padding: 8px 14px; /* 調整按鈕的內邊距 */
+      margin-left: -30px;
       background-color: #546979b6;
       color: #ffffff;
       font-size: 25px;
@@ -268,6 +320,21 @@
     
     setInterval(updateTime, 1000);
     setInterval(updateStatistics, 5000);
+
+
+
+
+    // 取得操作說明按鈕和操作說明文字框的DOM元素
+const guideButton = document.querySelector('.guide-button');
+const guideTooltip = document.querySelector('.guide-tooltip');
+
+// 設定操作說明文字
+const operationGuideText = '這裡放操作說明的文字...';
+guideTooltip.textContent = operationGuideText;
+
+
+
+
   </script>
 
  
@@ -289,10 +356,9 @@
     <div id="marquee">
       <marquee behavior="scroll" direction="left"class="marquee"><b>歡迎使用 目前網頁測試中!  歡迎使用 目前網頁測試中!  歡迎使用 目前網頁測試中!</b></marquee>
     </div>
-    
+
     <div id="announcement">
-      <b>公告事項：</b>目前網頁測試中!每周六0-6時為維護時段，暫停使用。
-       
+      <b>公告事項：</b>目前網頁測試中!每周六0-6時為維護時段，暫停使用。 
     </div>
     
     <div id="searchBox">
@@ -309,19 +375,41 @@
     <div id="onlineUsers">       
     </div>
     
+
+
+
+
+
+
+
+
     <div>
+      <div class="operation-guide">
+        <button class="guide-button"><strong>𝒊說明</strong></button>
+        <div class="guide-tooltip" style="text-align:left;">✱操作說明:<br> ◉點選「檔案上傳系統」或「檔案上傳系統」按鈕進入登入頁面，按提示輸入正確的帳號及密碼後即可登入頁面並進行檔案上傳或查詢。<br> ◉檔案上傳系統:為了確保檔案完整且安全，登入並送出檔案後欲再次上傳檔案請重新登入。<br> ◉檔案上傳系統:登入後重新整理頁面即可更新資料，不需再次登入。</div>
+    
+
+
+
       <a class="button" href="https://script.google.com/macros/s/AKfycbyoN2BfGz1rLauXg5Cjw6FD5AjxEdJVvZWXmAm3Iu15YROj215L8sP9Xmjh_nygujT-/exec" target="_self">檔案上傳系統</a>
       <a>&emsp;</a>
       <a class="button" href="https://script.google.com/macros/s/AKfycbyXxPX0pVo1MBMg3ZaNtz-Y3addqtypFu4akvLyg_TPy_mkjg_XxFmcavTsYVvczCV9EA/exec" target="_self">檔案查詢系統</a>
+      <div>
+        <p>&emsp;&emsp;</p>
+       </div>
     </div>
     
+
+
+
+
     <div id="imageContainer">
       <img src="account.jpg" alt="Account Image">
     </div>
 
     
     <div class="footer">
-      <p>問題回報&emsp;<a href="funwithme2021@gmail.com"style="color:#fafafa" >funwithme2021@gmail.com<br></a> Copyright © 2023 邱偉軒. All rights reserved.&emsp;|&emsp;V3.2.20230719&emsp;</p>
+      <p>問題回報&emsp;<a href="funwithme2021@gmail.com"style="color:#fafafa" >funwithme2021@gmail.com<br></a> Copyright © 2023 邱偉軒. All rights reserved.&emsp;|&emsp;V3.4.20230720&emsp;</p>
     </div>
 
     <script>
