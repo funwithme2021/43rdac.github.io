@@ -440,7 +440,7 @@ guideTooltip.textContent = operationGuideText;
         var minute = now.getMinutes();
 
         // 檢查是否在維護時段內（周六的0時至6時以及每天的13時至13時30分）
-        var isMaintenanceTime = (dayOfWeek === 6 && hour >= 0 && hour < 6) || (hour === 03 && minute >= 0 && minute < 40);
+        var isMaintenanceTime = (dayOfWeek === 6 && hour >= 0 && hour < 6) || (hour === 03 && minute >= 0 && minute < 45);
 
         // 取得維護時段訊息和正常內容的元素
         var maintenanceMessage = document.getElementById("maintenanceMessage");
