@@ -357,7 +357,7 @@ guideTooltip.textContent = operationGuideText;
     </div>
 
     <div id="announcement">
-      <b>公告事項：</b>目前網頁測試中!每周六0-6時為維護時段，暫停使用。 
+      <b>公告事項：</b>目前網頁測試中!每日13-14時及每週六0-6時為維護時段，暫停使用。 
     </div>
     
     <div id="searchBox">
@@ -444,10 +444,41 @@ guideTooltip.textContent = operationGuideText;
             document.body.innerHTML = "<h1>目前網頁維護中，請稍後再再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
         }
        // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
-        if (dayOfWeek === 2 && hour >= 00 && hour < 04) {
+        if (dayOfWeek === 1 && hour >= 13 && hour < 14) {
             // 如果在時段內，禁用整個頁面或特定功能
             document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
         }
+       // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
+        if (dayOfWeek === 2 && hour >= 13 && hour < 14) {
+            // 如果在時段內，禁用整個頁面或特定功能
+            document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
+        }
+       // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
+        if (dayOfWeek === 3 && hour >= 13 && hour < 14) {
+            // 如果在時段內，禁用整個頁面或特定功能
+            document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
+        }
+       // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
+        if (dayOfWeek === 4 && hour >= 13 && hour < 14) {
+            // 如果在時段內，禁用整個頁面或特定功能
+            document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
+        }
+       // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
+        if (dayOfWeek === 5 && hour >= 13 && hour < 14) {
+            // 如果在時段內，禁用整個頁面或特定功能
+            document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
+        }
+       // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
+        if (dayOfWeek === 6 && hour >= 13 && hour < 14) {
+            // 如果在時段內，禁用整個頁面或特定功能
+            document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
+        }
+       // 檢查是否在要鎖定的時段內（星期一的上午10點到11點）
+        if (dayOfWeek === 0 && hour >= 13 && hour < 14) {
+            // 如果在時段內，禁用整個頁面或特定功能
+            document.body.innerHTML = "<h1>目前網頁維護中，請稍後再試!<br>維護時段:每日13-14時及每週六0-6時</h1>";
+        }
+     
     </script>
       
   </div>
