@@ -416,20 +416,14 @@
 </style>      
 </head>
 <script>
-    window.addEventListener('DOMContentLoaded', function () {
-    // 在这里放置你的 JavaScript 代码
-
-// 添加点击事件监听器，切换答案的显示和隐藏状态
+window.addEventListener('DOMContentLoaded', function () {
 const questionRows = document.querySelectorAll('.faq-question');
 const answerRows = document.querySelectorAll('.faq-answer');
-
 questionRows.forEach((questionRow, index) => {
     questionRow.addEventListener('click', () => {
-        answerRows[index].classList.toggle('show-answer');
+    answerRows[index].classList.toggle('show-answer');
     });
 });
-
-// 初始状态下展开第一个问题的答案（可选）
 if (answerRows.length > 0) {
     answerRows[0].classList.add('show-answer');
 }
